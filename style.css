@@ -1,12 +1,106 @@
-body, html {
-    margin: 0;
-    padding: 0;
+html,
+body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    background-color: #000;
+    background: #000;
+    font-family: sans-serif;
+    touch-action: none;
 }
 
 canvas {
     display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#menuToggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s, left 0.3s ease;
+}
+
+#menuToggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#menuToggle.shifted {
+    left: 320px;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100%;
+    padding: 80px 20px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    background: rgba(15, 15, 20, 0.7);
+    backdrop-filter: blur(15px);
+    transition: left 0.3s ease;
+}
+
+#sidebar.open {
+    left: 0;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    font-size: 14px;
+}
+
+input[type="range"],
+select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+}
+
+select option {
+    background: #15151c;
 }

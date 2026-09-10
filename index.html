@@ -1,13 +1,58 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluid Sim - Step 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fluid Simulation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="canvas"></canvas>
+
+    <button id="menuToggle" type="button">☰ menu</button>
+
+    <aside id="sidebar">
+        <h2>settings</h2>
+
+        <div class="control-group">
+            <div class="control-header">
+                <span>width</span>
+                <span id="valRadius">3</span>
+            </div>
+            <input type="range" id="sliderRadius" min="1" max="15" value="3" step="1">
+        </div>
+
+        <div class="control-group">
+            <div class="control-header">
+                <span>duration</span>
+                <span id="valDissipation">97.5%</span>
+            </div>
+            <input type="range" id="sliderDissipation" min="0.850" max="0.999" value="0.975" step="0.001">
+        </div>
+
+        <div class="control-group">
+            <div class="control-header">
+                <span>brightness</span>
+                <span id="valBrightness">1.0</span>
+            </div>
+            <input type="range" id="sliderBrightness" min="0.1" max="5.0" value="1.0" step="0.1">
+        </div>
+
+        <div class="control-group">
+            <div class="control-header">
+                <span>color</span>
+            </div>
+            <select id="colorSelect">
+                <option value="cyan" style="color: #00dcff;">Cyan</option>
+                <option value="purple" style="color: #be5aff;">Purple</option>
+                <option value="green" style="color: #46ff82;">Green</option>
+                <option value="orange" style="color: #ff9628;">Orange</option>
+                <option value="pink" style="color: #ff50aa;">Pink</option>
+                <option value="white" style="color: #ffffff;">White</option>
+            </select>
+        </div>
+    </aside>
+
     <script src="script.js"></script>
 </body>
 </html>
