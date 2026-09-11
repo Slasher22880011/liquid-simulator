@@ -1,3 +1,15 @@
-This is my interactive 2D fluid simulation that runs right in your browser. I built it using pure HTML5 Canvas and JavaScript without any big libraries.
-It uses real grid-based fluid math so the colors swirl around realistically, plus about 800 floating particles that follow the flow. I also added a cool slide-out menu, where you can easily tweak the brush size, how long the liquid lasts, brightness, and switch between colors like cyan, purple, or pink.
-I made sure it works smoothly on both computers and phones using pointer events, so swiping on a touchscreen won't accidentally scroll the page. It's super fun to play around with!
+# 2D Liquid Simulator
+
+A lightweight, interactive 2D fluid simulation running directly in the browser. Built entirely with vanilla JavaScript and HTML5 Canvas.
+
+## How It Works
+
+- **Grid-based Fluid Solver:** Uses a velocity and density grid to simulate fluid dynamics, color diffusion, and swirling effects.
+- **Particles:** Renders ~800 particles that follow the underlying fluid velocity vectors to accentuate the flow and it is pushen away the stars.
+- **menu:** A collapsible side menu allows live adjustments for:
+  - Brush size
+  - Fluid longevity
+  - brightness
+  - Preset colors (Cyan, Purple, Pink, etc.)
+- **Pointer & Touch Support:** Built using the Pointer Events API to ensure smooth interactions across mouse and touchscreens without accidental page scrolling on mobile devices.
+
